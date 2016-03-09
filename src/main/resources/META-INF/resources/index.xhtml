@@ -13,7 +13,8 @@
 		<!-- ========== Content ========== -->
 		<ui:define name="content">
 			<h:form>
-				<h:outputLabel value="#{sampleBean.hello()}" />
+				<div><h:outputText value="#{sampleBean.hello()}" /></div>
+				<div>Random Number = <h:outputText value="#{sampleBean.randomNumber}" /></div>
 			</h:form>
 		</ui:define>
 
