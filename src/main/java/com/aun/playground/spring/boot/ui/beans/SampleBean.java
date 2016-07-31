@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 public class SampleBean {
 
 	public String hello() {
-		return "hello";
+		return "Hello World";
 	}
 
 	public int getRandomNumber() {
