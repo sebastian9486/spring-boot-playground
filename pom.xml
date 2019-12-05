@@ -19,6 +19,11 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.8</java.version>
 		<faces.version>2.2.11</faces.version>
+
+		<sonar.projectKey>sebastian9486_spring-boot-playground</sonar.projectKey>
+		<sonar.organization>sebastian9486</sonar.organization>
+		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+		<sonar.login>18781e6f5d3dfcb1910f99a0cdeafb5603c23468</sonar.login>
 	</properties>
 
 	<dependencies>
@@ -71,6 +76,17 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<!-- https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-maven -->
+			<plugin>
+				<groupId>org.sonarsource.scanner.maven</groupId>
+				<artifactId>sonar-maven-plugin</artifactId>
+				<version>3.6.0.1398</version>
+			</plugin>
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.8.4</version>
 			</plugin>
 		</plugins>
 	</build>
