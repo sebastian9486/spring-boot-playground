@@ -48,9 +48,13 @@ pipeline {
 
       stage('Deploy to AWS Prod') {
       }
-      stage('Smoke Test on AWS Prod') {
+
+	  stage('Smoke Test on AWS Prod') {
       }
 
+	  stage ('Slack notification on build') {
+	  }
+
     }
-	}
+  }
 }
