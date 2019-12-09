@@ -31,21 +31,25 @@ pipeline {
 
       stage('OWASP Dependency Check') {
         steps {
+			echo '...'
 		}
       }
 
       stage('Build Docker image') {
 		  steps {
+			  echo '...'
   		}
       }
 
       stage('Upload to Docker Hub') {
 		  steps {
+			  echo '...'
   		}
       }
 
       stage('Deploy to AWS Staging') {
 		  steps {
+			  echo '...'
   		}
       }
 
@@ -56,27 +60,32 @@ pipeline {
 
       stage('Load Test on AWS Staging') {
 		  steps {
+			  echo '...'
   		}
       }
 
       stage('Git Changelog') {
 		  steps {
+			  echo '...'
 			  // https://plugins.jenkins.io/git-changelog
   		}
       }
 
       stage('Deploy to AWS Prod') {
 		  steps {
+			  echo '...'
   		}
       }
 
 	  stage('Smoke Test on AWS Prod') {
 		  steps {
+			  echo '...'
   		}
       }
 
 	  stage ('Slack notification on build') {
 		  steps {
+			  echo '...'
   		}
 	  }
 
