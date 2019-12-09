@@ -11,7 +11,7 @@ pipeline {
         sh "mvn clean package"
       }
 
-			stage('Sonar') {
+	stage('Sonar') {
         sh "mvn sonar:sonar"
       }
 
