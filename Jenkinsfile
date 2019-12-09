@@ -3,16 +3,22 @@ pipeline {
     stages {
 
       stage('Checkout from SCM') {
-        // checkout scm
-        git url: 'https://github.com/sebastian9486/spring-boot-playground.git'
+        steps {
+			// checkout scm
+        	git url: 'https://github.com/sebastian9486/spring-boot-playground.git'
+		}
       }
 
       stage('Maven Build') {
-        sh "mvn clean package"
+		  steps {
+        	sh "mvn clean package"
+		}
       }
 
 	stage('Sonar') {
-        sh "mvn sonar:sonar"
+		steps {
+        	sh "mvn sonar:sonar"
+		}
       }
 
       stage("Sonar Quality Gate") {
@@ -24,35 +30,54 @@ pipeline {
       }
 
       stage('OWASP Dependency Check') {
-        // Jenkins plugin: https://plugins.jenkins.io/dependency-check-jenkins-plugin
+        steps {
+		}
       }
 
       stage('Build Docker image') {
+		  steps {
+  		}
       }
 
       stage('Upload to Docker Hub') {
+		  steps {
+  		}
       }
 
       stage('Deploy to AWS Staging') {
+		  steps {
+  		}
       }
 
       stage('Pen Test on AWS Staging') {
+		  steps {
+  		}
       }
 
       stage('Load Test on AWS Staging') {
+		  steps {
+  		}
       }
 
       stage('Git Changelog') {
-        // https://plugins.jenkins.io/git-changelog
+		  steps {
+			  // https://plugins.jenkins.io/git-changelog
+  		}
       }
 
       stage('Deploy to AWS Prod') {
+		  steps {
+  		}
       }
 
 	  stage('Smoke Test on AWS Prod') {
+		  steps {
+  		}
       }
 
 	  stage ('Slack notification on build') {
+		  steps {
+  		}
 	  }
 
     }
