@@ -55,6 +55,7 @@ pipeline {
 
       stage('Pen Test on AWS Staging') {
 		  steps {
+			echo '...'
   		}
       }
 
